@@ -56,20 +56,22 @@ function validateEmail(email) {
   const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return re.test(email);
 }
-const readMoreButtons = document.querySelectorAll('.read-more-btn');
 
-readMoreButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    const productCard = button.closest('.product-card');
-    const fullDesc = productCard.querySelector('.full-desc');
-    const shortDesc = productCard.querySelector('.short-desc');
+document.addEventListener('DOMContentLoaded', () => {
+  const buttons = document.querySelectorAll('.read-more-btn');
 
-    if (fullDesc.style.display === 'block') {
-      fullDesc.style.display = 'none';
-      button.textContent = 'Read More';
-    } else {
-      fullDesc.style.display = 'block';
-      button.textContent = 'Read Less';
-    }
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const card = btn.closest('.product-card');
+      const fullDesc = card.querySelector('.full-desc');
+
+      if (fullDesc.style.display === 'block') {
+        fullDesc.style.display = 'none';
+        btn.textContent = 'Read More';
+      } else {
+        fullDesc.style.display = 'block';
+        btn.textContent = 'Read Less';
+      }
+    });
   });
 });

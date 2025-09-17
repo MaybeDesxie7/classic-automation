@@ -208,8 +208,8 @@ header {
 .full-desc {
   display: none;
   text-align: left;
-  margin-top: 10px;
   font-size: 0.9rem;
+  margin-top: 10px;
 }
 
 .read-more-btn {
@@ -228,11 +228,8 @@ header {
   background: #0077b5;
 }
 
-
-.product-icon {
-  font-size: 2rem;
-  color: #0099e6;
-  margin-bottom: 15px;
+.read-more-btn:hover {
+  background: #0077b5;
 }
 
 /* -----------------------
